@@ -6,7 +6,7 @@ import { MdOutlineSchedule, MdPersonOutline } from 'react-icons/md';
 
 const PopularCard = ({ course }) => {
     return (
-        <div className=' rounded-xl hover:shadow-xl border border-gray-300 h-full flex flex-col hover:border-gray-400'>
+        <div className=' rounded-xl hover:shadow-xl border border-gray-300 h-full flex flex-col hover:border-gray-400 '>
             <div className='overflow-hidden rounded-t-xl '>
                 <Image src={course.image} alt={course.title} width={400} height={200} className='w-full h-56 hover:scale-105 duration-500' />
             </div>
