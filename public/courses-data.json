@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20h",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "This comprehensive bootcamp takes you from absolute beginner to job-ready full-stack developer. You will learn HTML, CSS, JavaScript, and modern frameworks while building real-world projects.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "React & Next.js Complete Guide",
+    "instructor": "Michael Lee",
+    "duration": "18h",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Master modern frontend development using React and Next.js with real-world applications and production-ready projects.",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science",
+    "instructor": "David Brown",
+    "duration": "22h",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Analyze, visualize, and manipulate data using Python with hands-on projects and real datasets.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    "category": "Data Science"
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning A-Z",
+    "instructor": "Sophia Davis",
+    "duration": "25h",
+    "rating": 4.6,
+    "level": "Advanced",
+    "description": "Learn machine learning algorithms and build intelligent systems using real-world data.",
+    "image": "https://images.unsplash.com/photo-1526378722484-cc5c3b2a8c6c",
+    "category": "AI"
+  },
+  {
+    "id": 5,
+    "title": "Advanced JavaScript Mastery",
+    "instructor": "Sarah Smith",
+    "duration": "15h",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Deep dive into advanced JavaScript concepts like closures, async programming, and design patterns.",
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Node.js Backend Development",
+    "instructor": "Chris Martin",
+    "duration": "17h",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build scalable backend APIs using Node.js, Express, and real-world architecture patterns.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "category": "Development"
+  },
+  {
+    "id": 7,
+    "title": "DevOps & CI/CD Pipeline",
+    "instructor": "Daniel Anderson",
+    "duration": "14h",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Learn DevOps practices, CI/CD pipelines, Docker, and cloud deployment strategies.",
+    "image": "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
+    "category": "DevOps"
+  },
+  {
+    "id": 8,
+    "title": "Flutter App Development",
+    "instructor": "James Wilson",
+    "duration": "16h",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Create cross-platform mobile apps using Flutter and Dart with modern UI techniques.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
+    "category": "Mobile Development"
+  },
+  {
+    "id": 9,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Johnson",
+    "duration": "12h",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn UI/UX design principles including wireframing, prototyping, and user research.",
+    "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698",
+    "category": "Design"
+  }
+]
