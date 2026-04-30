@@ -11,7 +11,7 @@ const PopularCourses = async () => {
     const sorted = [...AllCourses].sort((a, b) => b.rating - a.rating);
     const courses = sorted.splice(0, 3)
 
-    console.log(courses, "most popular")
+    // console.log(courses, "most popular")
 
     return (
         <div className=' w-11/12 mx-auto mb-20'>
