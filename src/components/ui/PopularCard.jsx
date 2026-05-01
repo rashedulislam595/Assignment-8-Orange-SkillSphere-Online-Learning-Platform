@@ -22,7 +22,7 @@ const PopularCard = ({ course }) => {
                 <hr className='mt-2 mb-4 text-gray-300 font-bold' />
                 <div className='grow flex justify-between items-center'>
                     <p className='flex items-center gap-1.5 text-[#c48670] '><MdOutlineSchedule className='text-lg' /> {`${course.duration} content`}</p>
-                    <Link href={'/'} className='text-blue-600 text-sm font-bold'>View Details</Link>
+                    <Link href={`course-details/${course.id}`} className='text-blue-600 text-sm font-bold'>View Details</Link>
                 </div>
             </div>
         </div>

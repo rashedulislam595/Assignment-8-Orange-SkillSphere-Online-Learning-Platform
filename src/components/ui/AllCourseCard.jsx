@@ -22,7 +22,7 @@ const AllCourseCard = ({course}) => {
                 <div className='grow flex justify-between items-center'>
                     <p className='flex items-center gap-1.5 text-[#c48670] '><MdOutlineSchedule className='text-lg' /> {`${course.duration} content`}</p>
                     <p className='flex gap-1.5 items-center font-bold'><FaStar className='text-yellow-500' /> {course.rating}</p>
-                    <Link href={'/'} className='btn btn-primary '>Details</Link>
+                    <Link href={`/course-details/${course.id}`} className='btn btn-primary '>Details</Link>
                 </div>
             </div>
         </div>

@@ -31,10 +31,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <Link href={"/"}>
+                    <Link href={"/login"}>
                     <button className='btn btn-primary btn-soft border-blue-600'>Login</button>
                     </Link>
-                    <Link href={"/"}>
+                    <Link href={"/register"}>
                     <button className='btn btn-neutral btn-soft border-black'>Register</button>
                     </Link>
                 </div>
