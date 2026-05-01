@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Complete Web Development Bootcamp",
+    "title": "Complete Web Development",
     "instructor": "John Doe",
     "duration": "20h",
     "rating": 4.9,
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "level": "Advanced",
     "description": "Learn machine learning algorithms and build intelligent systems using real-world data.",
-    "image": "https://images.unsplash.com/photo-1526378722484-cc5c3b2a8c6c",
+    "image": "https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFjaGluZSUyMGxlYXJuaW5nfGVufDB8fDB8fHww",
     "category": "AI"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Deep dive into advanced JavaScript concepts like closures, async programming, and design patterns.",
-    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+    "image": "https://images.unsplash.com/photo-1593720213681-e9a8778330a7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWR2YW5jZWQlMjBKYXZhU2NyaXB0JTIwTWFzdGVyeXxlbnwwfHwwfHx8MA%3D%3D",
     "category": "Development"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Learn DevOps practices, CI/CD pipelines, Docker, and cloud deployment strategies.",
-    "image": "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
+    "image": "https://media.istockphoto.com/id/1415511633/photo/devops-software-development-operations-programmer-administration-system-life-cycle-quality.webp?a=1&b=1&s=612x612&w=0&k=20&c=y63Iu54PpjSwMIM4k1s6D2xzCFKZPajlq3_GVQZ_G3U=",
     "category": "DevOps"
   },
   {

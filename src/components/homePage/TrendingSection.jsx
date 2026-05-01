@@ -7,7 +7,7 @@ const TrendingSection = () => {
             <h2 className='text-4xl font-bold'>Trending Right Now</h2>
 
             {/* trending course 01 */}
-            <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-7 px-5 rounded-2xl mt-10 group'>
+            <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-7 px-5 rounded-2xl mt-10 group cursor-pointer'>
                 <div className='flex gap-5 items-center'>
                     <h2 className='text-2xl font-extrabold text-blue-700 opacity-40 group-hover:opacity-100'>01</h2>
                     <div>
@@ -18,7 +18,7 @@ const TrendingSection = () => {
                 <IoMdTrendingUp className='text-2xl text-blue-700 opacity-10 group-hover:opacity-100' />
             </div>
             {/* trending course 02 */}
-            <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-7 px-5 rounded-2xl mt-5 group'>
+            <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-7 px-5 rounded-2xl mt-5 group cursor-pointer'>
                 <div className='flex gap-5 items-center'>
                     <h2 className='text-2xl font-extrabold text-blue-700 opacity-40 group-hover:opacity-100'>02</h2>
                     <div>
@@ -29,7 +29,7 @@ const TrendingSection = () => {
                 <IoMdTrendingUp className='text-2xl text-blue-700 opacity-10 group-hover:opacity-100' />
             </div>
             {/* trending course 03 */}
-            <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-7 px-5 rounded-2xl mt-5 group'>
+            <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-7 px-5 rounded-2xl mt-5 group cursor-pointer'>
                 <div className='flex gap-5 items-center'>
                     <h2 className='text-2xl font-extrabold text-blue-700 opacity-40 group-hover:opacity-100'>03</h2>
                     <div>

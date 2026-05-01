@@ -5,12 +5,12 @@ import NavLink from './NavLink';
 
 const Navbar = () => {
     const links = <>
-        <li><NavLink href={"/"}>Home</NavLink></li>
+        <li><NavLink href={"/"} className='border w-20'>Home</NavLink></li>
         <li><NavLink href={"/all-courses"}>Courses</NavLink></li>
         <li><NavLink href={"/my-profile"}>My Profile</NavLink></li>
     </>
     return (
-        <div className=' bg-base-100 shadow-sm'>
+        <div className=' bg-base-100 shadow-sm sticky top-0 z-10'>
             <div className="navbar w-11/12 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <h2 className="text-2xl md:text-3xl flex gap-1.5 font-bold items-center  text-blue-700"><IoSchoolSharp />SkillSphere</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1  font-bold ">
+                    <ul className=" gap-4 flex px-1  font-bold ">
                         {links}
                     </ul>
                 </div>
