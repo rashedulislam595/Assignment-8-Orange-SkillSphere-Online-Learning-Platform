@@ -5,6 +5,7 @@ import { FaStar } from 'react-icons/fa';
 import { MdOutlineSchedule, MdPersonOutline } from 'react-icons/md';
 
 const PopularCard = ({ course }) => {
+    const levelName = course.level;
     return (
         <div className=' rounded-xl hover:shadow-xl border border-gray-300 h-full flex flex-col hover:border-gray-400 group'>
             <div className='overflow-hidden rounded-t-xl '>
@@ -12,7 +13,7 @@ const PopularCard = ({ course }) => {
             </div>
             <div className='mt-5 grow flex flex-col space-y-4 p-4'>
                 <div className='grow flex items-center gap-6 '>
-                    <button className='px-3 bg-blue-200 text-blue-600 text-sm font-bold rounded-sm py-0.5'>{course.level}</button>
+                    <button className={`px-3 ${levelName === "Beginner"?"bg-[#005338] text-white":levelName ==="Intermediate"?"bg-blue-200 text-blue-600":levelName === "Advanced"?"text-white bg-blue-600":""} text-sm font-bold rounded-full py-0.5 `}>{levelName}</button>
                     <p className='flex gap-1.5 items-center font-bold'><FaStar className='text-yellow-500' /> {course.rating}</p>
                 </div>
                 <div className='grow'>
