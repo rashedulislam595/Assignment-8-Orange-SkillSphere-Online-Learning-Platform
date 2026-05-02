@@ -49,19 +49,19 @@ const DetailsCard = ({ course }) => {
                 </div>
             </div>
 
-            <div className='p-8 rounded-xl hover:shadow-xl border border-gray-300 h-full flex flex-col hover:border-gray-400 mt-10'>
+            <div className='sm:p-8 p-4 rounded-xl hover:shadow-xl border border-gray-300 h-full flex flex-col hover:border-gray-400 mt-10'>
                 <h2 className='text-2xl font-bold'>Course Description</h2>
                 <p className='text-[#11111190] mt-5'>{course.description}</p>
 
                 {/* Curriculum section */}
                 <div className='mt-5 '>
-                    <div className='flex justify-between items-center gap-5'>
+                    <div className='sm:flex justify-between items-center gap-5'>
                         <h2 className='text-2xl font-bold'>Course Curriculum</h2>
-                        <p className='text-primary text-sm font-bold'>14 Modules • 82 Lessons</p>
+                        <p className='text-primary text-sm font-bold text-right mt-3 sm:mt-0 sm:text-left'>14 Modules • 82 Lessons</p>
                     </div>
 
                     {/* curriculum 01 */}
-                    <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 px-5 rounded-2xl mt-5 group cursor-pointer'>
+                    <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 sm:px-5 px-2 rounded-2xl mt-5 group cursor-pointer'>
                         <div className='flex gap-5 items-center'>
                             <h2 className='text-2xl font-bold text-blue-700 opacity-40 group-hover:opacity-100'>01</h2>
                             <div>
@@ -69,10 +69,10 @@ const DetailsCard = ({ course }) => {
                                 <p className='text-[#11111190] '>Principles, mental models, and stakeholder alignment.</p>
                             </div>
                         </div>
-                        <MdExpandMore className='text-2xl  group-hover:text-primary' />
+                        <MdExpandMore className='hidden sm:inline text-2xl  group-hover:text-primary' />
                     </div>
                     {/* curriculum 02 */}
-                    <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 px-5 rounded-2xl mt-5 group cursor-pointer'>
+                    <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 sm:px-5 px-2 rounded-2xl mt-5 group cursor-pointer'>
                         <div className='flex gap-5 items-center'>
                             <h2 className='text-2xl font-bold text-blue-700 opacity-40 group-hover:opacity-100'>02</h2>
                             <div>
@@ -80,7 +80,7 @@ const DetailsCard = ({ course }) => {
                                 <p className='text-[#11111190] '>Taxonomies, mapping user flows, and complex navigation.</p>
                             </div>
                         </div>
-                        <MdExpandMore className='text-2xl  group-hover:text-primary' />
+                        <MdExpandMore className='hidden sm:inline text-2xl  group-hover:text-primary' />
                     </div>
                     {/* curriculum 03 */}
                     <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 px-5 rounded-2xl mt-5 group cursor-pointer'>
@@ -91,10 +91,10 @@ const DetailsCard = ({ course }) => {
                                 <p className='text-[#11111190] '>Tokens, components, and documentation workflows..</p>
                             </div>
                         </div>
-                        <CiLock className='text-2xl group-hover:text-primary' />
+                        <CiLock className='hidden sm:inline text-2xl group-hover:text-primary' />
                     </div>
                     {/* curriculum 04 */}
-                    <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 px-5 rounded-2xl mt-5 group cursor-pointer'>
+                    <div className='flex justify-between items-center border border-gray-300 hover:border-primary py-4 sm:px-5 px-2 rounded-2xl mt-5 group cursor-pointer'>
                         <div className='flex gap-5 items-center'>
                             <h2 className='text-2xl font-bold text-blue-700 opacity-40 group-hover:opacity-100'>04</h2>
                             <div>
@@ -102,7 +102,7 @@ const DetailsCard = ({ course }) => {
                                 <p className='text-[#11111190] '>Quantifying UX success and presenting to leadership.</p>
                             </div>
                         </div>
-                        <CiLock className='text-2xl group-hover:text-primary' />
+                        <CiLock className='hidden sm:inline text-2xl group-hover:text-primary' />
                     </div>
                 </div>
 

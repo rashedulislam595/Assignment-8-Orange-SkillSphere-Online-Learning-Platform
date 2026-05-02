@@ -1,11 +1,25 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
 import { IoSchoolSharp } from 'react-icons/io5';
 import NavLink from './NavLink';
+import { authClient } from '@/lib/auth-client';
+import Image from 'next/image';
+import userAvatar from '@/assets/user.png'
+import { CiLogout } from 'react-icons/ci';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
+    const { data: session,isPending } = authClient.useSession()
+    const users = session?.user;
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+        toast.success("You've been logged out successfully.", { theme: "dark", position: "top-center" })
+    }
+
     const links = <>
-        <li><NavLink href={"/"} className='border w-20'>Home</NavLink></li>
+        <li><NavLink href={"/"} className=''>Home</NavLink></li>
         <li><NavLink href={"/all-courses"}>Courses</NavLink></li>
         <li><NavLink href={"/my-profile"}>My Profile</NavLink></li>
     </>
@@ -21,6 +35,9 @@ const Navbar = () => {
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-bold">
                             {links}
+                            {
+                                users?<button onClick={handleLogout} className='btn btn-error btn-soft border-error sm:hidden mt-3'>Logout</button>:""
+                            }
                         </ul>
                     </div>
                     <h2 className="text-2xl md:text-3xl flex gap-1.5 font-bold items-center  text-blue-700"><IoSchoolSharp />SkillSphere</h2>
@@ -31,12 +48,24 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <Link href={"/login"}>
-                    <button className='btn btn-primary btn-soft border-blue-600'>Login</button>
-                    </Link>
-                    <Link href={"/register"}>
-                    <button className='btn btn-neutral btn-soft border-black'>Register</button>
-                    </Link>
+                    {
+                        isPending?<span className="loading loading-infinity loading-xl"></span>:
+                        <>
+                        {
+                        users ? <>
+                            <Link href={'/my-profile'}>
+                                <Image src={users?.image|| userAvatar} alt="User avatar" width={50} height={50} className="rounded-full" />
+                            </Link>
+                            <button onClick={handleLogout} className='btn btn-error btn-soft border-error hidden sm:inline'>Logout</button>
+                        </> : <>
+                            <Link href={"/login"}>
+                                <button className='btn btn-primary btn-soft border-blue-600'>Login</button>
+                            </Link>
+                            <Link href={"/register"}>
+                                <button className='btn btn-neutral btn-soft border-black hidden sm:inline'>Register</button>
+                            </Link></>
+                    }</>
+                    }
                 </div>
             </div>
         </div>

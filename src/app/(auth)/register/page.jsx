@@ -4,14 +4,33 @@ import { IoEyeOff } from 'react-icons/io5';
 import { FaEye, FaGoogle } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 const RegisterPage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [isShow,setIsShow] = useState(true)
+    const [isShow, setIsShow] = useState(true);
+    const router = useRouter()
 
     const handelRegister = async (data) => {
         const { name, photoUrl, email, password } = data;
         // console.log(name,photoUrl,email,password)
+        
+        const { data:res, error } = await authClient.signUp.email({
+            name: name,
+            email: email,
+            password: password,
+            image: photoUrl,
+            callbackURL: "/login",
+        });
+        // console.log("response",{res,error})
+        if(res){
+            toast.success("Welcome! Your account has been created successfully.",{theme:"dark",position: "top-center"})
+            router.push("/login")
+        }else{
+            toast.error(error.message,{theme:"dark",position: "top-center"})
+        }
 
     }
     return (
@@ -20,11 +39,11 @@ const RegisterPage = () => {
                 <h2 className='text-4xl font-semibold text-[#403F3F] mb-12'>Register your account</h2>
                 <div >
                     <button className="btn border-blue-500 text-blue-500 w-full" >
-                      <FaGoogle />
-                      Sign up with google
+                        <FaGoogle />
+                        Sign up with google
                     </button>
-                  </div>
-                  <div className="divider mt-10">OR EMAIL</div>
+                </div>
+                <div className="divider mt-10">OR EMAIL</div>
 
                 <form onSubmit={handleSubmit(handelRegister)}>
                     <fieldset className="fieldset mb-2">
@@ -49,7 +68,7 @@ const RegisterPage = () => {
 
                     <fieldset className="fieldset mt-2 relative">
                         <legend className="fieldset-legend text-xl font-semibold text-[#403F3F]">Password</legend>
-                        <input type={isShow?"password":"text"} className="input w-full rounded-md"
+                        <input type={isShow ? "password" : "text"} className="input w-full rounded-md"
                             {...register("password", { required: "Password filed is required!" })} placeholder="Enter your Password" />
                         <span className='absolute right-2 top-3.5 text-lg' onClick={() => setIsShow(!isShow)}>
                             {isShow ? <IoEyeOff /> : <FaEye />
@@ -60,7 +79,7 @@ const RegisterPage = () => {
                     <button className='btn bg-[#403F3F] mt-5 w-full text-white text-lg font-bold'>Register</button>
                 </form>
                 <p className='text-[#706F6F] font-semibold my-4 text-center'>Already have an account? <Link href={'/login'} className='text-blue-600'>Log in</Link></p>
-                
+
             </div>
         </div>
     );
