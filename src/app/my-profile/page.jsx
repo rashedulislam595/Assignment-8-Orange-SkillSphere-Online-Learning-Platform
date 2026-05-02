@@ -11,7 +11,9 @@ import UpdateUser from '@/components/ui/UpdateUser';
 const MyProfilePage = () => {
     const { data: session, isPending } = authClient.useSession()
     if (isPending) {
-        return <p>loading...</p>
+        return <div className='py-44 w-10/12 mx-auto flex justify-center items-center'>
+            <span className="loading loading-bars loading-lg"></span>
+        </div>
     }
     const users = session?.user;
     // console.log(users)

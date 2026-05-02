@@ -31,7 +31,7 @@ const TipsSection = () => {
                             </div>
                         </div>
                         {/* Study Groups */}
-                        <div className='bg-[#FFFFFF] py-16 px-7 rounded-2xl border border-gray-300'>
+                        <div className='bg-[#FFFFFF] py-16 px-7 rounded-2xl border border-gray-300 col-span-2 sm:col-span-1'>
                             <div className='flex justify-center'>
                                 <MdGroups className='text-blue-600 text-4xl' />
                             </div>
@@ -41,7 +41,7 @@ const TipsSection = () => {
                             </div>
                         </div>
                         {/* Cornell Method */}
-                        <div className='bg-[#2a313d] py-16 px-7 rounded-2xl border border-gray-300'>
+                        <div className='bg-[#2a313d] py-16 px-7 rounded-2xl border border-gray-300 col-span-2 sm:col-span-1'>
                             <div className='flex justify-center'>
                                 <MdEditNote className='text-white text-4xl' />
                             </div>

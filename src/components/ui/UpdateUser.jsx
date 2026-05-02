@@ -11,7 +11,6 @@ const UpdateUser = () => {
     const handleUpdate = async (data) => {
         const { name, photoUrl } = await data;
         console.log(await data)
-
         await authClient.updateUser({
             name,
             image: photoUrl,
@@ -24,7 +23,7 @@ const UpdateUser = () => {
 
     return (
         <div>
-            <button onClick={() => document.getElementById('my_modal_5').showModal()} className='flex gap-2 btn btn-primary items-center ' ><CiSettings className='text-xl' />Update Information</button>
+            <button onClick={() => document.getElementById('my_modal_5').showModal()} className='flex gap-2 btn btn-primary items-center ' ><CiSettings className='text-xl' />Update Profile</button>
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
                     <div className='text-end'>

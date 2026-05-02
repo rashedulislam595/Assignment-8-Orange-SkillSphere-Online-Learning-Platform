@@ -16,29 +16,36 @@ const RegisterPage = () => {
     const handelRegister = async (data) => {
         const { name, photoUrl, email, password } = data;
         // console.log(name,photoUrl,email,password)
-        
-        const { data:res, error } = await authClient.signUp.email({
+
+        const { data: res, error } = await authClient.signUp.email({
             name: name,
             email: email,
             password: password,
             image: photoUrl,
-            callbackURL: "/login",
         });
         // console.log("response",{res,error})
-        if(res){
-            toast.success("Welcome! Your account has been created successfully.",{theme:"dark",position: "top-center"})
+        if (res) {
+            toast.success("Welcome! Your account has been created successfully.", { theme: "dark", position: "top-center" })
             router.push("/login")
-        }else{
-            toast.error(error.message,{theme:"dark",position: "top-center"})
+        } else {
+            toast.error(error.message, { theme: "dark", position: "top-center" })
         }
 
     }
+    const signIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+        toast.success("Welcome! Your account has been created successfully.", { theme: "dark", position: "top-center" })
+    };
+
+
     return (
         <div className='h-[90vh] p-20 flex justify-center items-center bg-slate-200 '>
             <div className='bg-white p-16 rounded-2xl py-10'>
                 <h2 className='text-4xl font-semibold text-[#403F3F] mb-12'>Register your account</h2>
                 <div >
-                    <button className="btn border-blue-500 text-blue-500 w-full" >
+                    <button className="btn border-blue-500 text-blue-500 w-full" onClick={signIn} >
                         <FaGoogle />
                         Sign up with google
                     </button>

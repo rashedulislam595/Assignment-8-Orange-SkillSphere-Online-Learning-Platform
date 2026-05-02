@@ -14,19 +14,27 @@ const LoginPage = () => {
         // console.log(data);
         const { email, password } = data;
 
-        const { data:res, error } = await authClient.signIn.email({
+        const { data: res, error } = await authClient.signIn.email({
             email,
             password,
             rememberMe: true,
             callbackURL: "/",
         });
-        if(res){
-            toast.success("Welcome back! You're now logged in.",{theme:"dark",position: "top-center"})
-        }else{
-            toast.error(error.message,{theme:"dark",position: "top-center"})
+        if (res) {
+            toast.success("Welcome back! You're now logged in.", { theme: "dark", position: "top-center" })
+        } else {
+            toast.error(error.message, { theme: "dark", position: "top-center" })
         }
 
     }
+
+    const signIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+        toast.success("Welcome! Your account has been created successfully.", { theme: "dark", position: "top-center" })
+    };
+
     return (
         <div className='h-[90vh] p-20 flex justify-center items-center bg-slate-200'>
             <div className='bg-white p-16 rounded-2xl'>
@@ -54,7 +62,7 @@ const LoginPage = () => {
                 </form>
                 <p className='text-[#706F6F] font-semibold my-4 text-center'>Do not Have An Account ? <Link href={'/register'} className='text-blue-600'>Register</Link></p>
                 <div >
-                    <button className="btn border-blue-500 text-blue-500 w-full" >
+                    <button className="btn border-blue-500 text-blue-500 w-full" onClick={signIn} >
                         <FaGoogle />
                         Login with google
                     </button>
