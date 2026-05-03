@@ -15,9 +15,9 @@ const PopularCourses = async () => {
 
     return (
         <div className=' w-11/12 mx-auto mb-20'>
-            <div className='my-7 flex justify-between items-center'>
+            <div className='my-7 sm:flex justify-between items-center'>
                 <h2 className='text-4xl font-bold'>Popular Courses</h2>
-                <Link href={'/all-courses'} className='flex gap-2 items-center text-blue-600 font-bold hover:text-blue-800'>View all courses <FaArrowRight /></Link>
+                <Link href={'/all-courses'} className='flex gap-2 items-center text-blue-600 font-bold hover:text-blue-800 mt-4 sm:mt-0 justify-end sm:justify-start'>View all courses <FaArrowRight /></Link>
             </div>
             <div className='grid sm:grid-cols-2 md:grid-cols-3  md:justify-between items-center gap-5 '>
                 {
