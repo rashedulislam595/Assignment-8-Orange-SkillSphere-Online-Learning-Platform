@@ -2,22 +2,25 @@
 import AllCourseCard from '@/components/ui/AllCourseCard';
 import { GetAllCourses } from '@/lib/data';
 import React, { useEffect, useState } from 'react';
+import { BiSearch } from 'react-icons/bi';
 
 const AllCoursesPage = () => {
     const [allCourses, setAllCourses] = useState([])
-    const [searchingValue,setSearchingValue] = useState("")
+    const [searchingValue, setSearchingValue] = useState("")
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const loadCourses = async () => {
             const courses = await GetAllCourses();
             setAllCourses(courses);
+            setLoading(false)
         };
 
         loadCourses();
     }, []);
 
-    const handleSearch =()=>{
-        const exceptedCourse = allCourses.filter(course =>course.title.toLowerCase().includes(searchingValue.toLowerCase()))
+    const handleSearch = () => {
+        const exceptedCourse = allCourses.filter(course => course.title.toLowerCase().includes(searchingValue.toLowerCase()))
         setAllCourses(exceptedCourse)
         setSearchingValue("")
     }
@@ -44,7 +47,7 @@ const AllCoursesPage = () => {
                                 <path d="m21 21-4.3-4.3"></path>
                             </g>
                         </svg>
-                        <input type="search" value={searchingValue} onChange={(e)=>setSearchingValue(e.target.value)} required placeholder="Search courses by tittle" />
+                        <input type="search" value={searchingValue} onChange={(e) => setSearchingValue(e.target.value)} required placeholder="Search courses by tittle" />
                     </label>
                     <button onClick={handleSearch} className="btn btn-primary join-item">Search</button>
                 </div>
@@ -53,7 +56,21 @@ const AllCoursesPage = () => {
 
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10 '>
                 {
-                    allCourses.map(course => <AllCourseCard key={course.id} course={course} />)
+                    loading ? 
+                    <div className='flex justify-center items-center sm:py-44 py-20 col-span-full '>
+                        <span className="loading text-center loading-infinity loading-xl"></span>
+                    </div> :
+                        allCourses.length === 0 ? <div className='flex flex-col justify-center items-center py-20 sm:col-span-2 lg:col-span-3 border bg-base-300 rounded-2xl border-gray-300 shadow-sm p-5'>
+                            <BiSearch className='text-4xl text-[#11111170]' />
+                            <h3 className="text-3xl font-semibold text-[#11111190]">
+                                No courses found
+                            </h3>
+                            <p className="text-gray-400 mt-2 max-w-md text-center">
+                                We could not find any courses matching your search.
+                                Try different keywords or explore all available courses.
+                            </p>
+                        </div> :
+                            allCourses.map(course => <AllCourseCard key={course.id} course={course} />)
                 }
             </div>
         </div>
