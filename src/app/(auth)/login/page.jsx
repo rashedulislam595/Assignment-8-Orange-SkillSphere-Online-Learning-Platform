@@ -36,9 +36,9 @@ const LoginPage = () => {
     };
 
     return (
-        <div className='h-[90vh] p-20 flex justify-center items-center bg-slate-200'>
-            <div className='bg-white p-16 rounded-2xl'>
-                <h2 className='text-4xl font-semibold text-[#403F3F] mb-12'>Login your account</h2>
+        <div className='py-10 px-5 md:p-20 flex justify-center items-center bg-slate-200'>
+            <div className='bg-white md:p-16 rounded-2xl p-5'>
+                <h2 className='text-4xl font-semibold text-[#403F3F] md:mb-12 mb-6 text-center'>Login your account</h2>
 
                 <form onSubmit={handleSubmit(handelLogin)}>
                     <fieldset className="fieldset">

@@ -41,9 +41,9 @@ const RegisterPage = () => {
 
 
     return (
-        <div className='h-[90vh] p-20 flex justify-center items-center bg-slate-200 '>
-            <div className='bg-white p-16 rounded-2xl py-10'>
-                <h2 className='text-4xl font-semibold text-[#403F3F] mb-12'>Register your account</h2>
+        <div className='py-10 px-5 md:p-20 flex justify-center items-center bg-slate-200 '>
+            <div className='bg-white md:p-16 rounded-2xl p-6'>
+                <h2 className='text-4xl font-semibold text-[#403F3F] md:mb-12 mb-7 text-center'>Register your account</h2>
                 <div >
                     <button className="btn border-blue-500 text-blue-500 w-full" onClick={signIn} >
                         <FaGoogle />
