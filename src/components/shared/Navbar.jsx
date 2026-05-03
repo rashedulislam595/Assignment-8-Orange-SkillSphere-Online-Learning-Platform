@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink href={"/"} className=''>Home</NavLink></li>
+        <li className=''><NavLink href={"/"} className=''>Home</NavLink></li>
         <li><NavLink href={"/all-courses"}>Courses</NavLink></li>
         <li><NavLink href={"/my-profile"}>My Profile</NavLink></li>
     </>
